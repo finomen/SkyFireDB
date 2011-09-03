@@ -1,5 +1,6 @@
 #!/bin/bash
 # Modified script from WhyDB
+#logo
 ############################################################################
 #
 #  Tool Configuration
@@ -9,9 +10,16 @@
 #  wdb - Your world database
 #
 ############################################################################
-user="mysql_user"
-pass="mysql_password"
-wdb="wow_world"
+#user="mysql_user"
+#pass="mysql_password"
+#wdb="wow_world"
+
+echo "MySQL user: "
+read user
+echo "MySQL password: "
+read pass
+echo "MySQL db: "
+read wdb
 
 ############################################################################
 #
@@ -40,7 +48,6 @@ fi
 #
 ############################################################################
 until [ "${option}" = "x" ]; do
-	logo
 	echo " i - Install Clean World Database"
 	echo " u - Update World Database"
 	echo " x - Exit Tool"
